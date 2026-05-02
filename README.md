@@ -1,115 +1,66 @@
-# 🏥 Patient Management System
 
-A simple **Patient Management System** developed to manage patient records and basic hospital operations efficiently.
+---
 
-This project demonstrates the use of **programming concepts, data structures, and modular design** to organize patient information and improve record management.
+# Hospital Patient Management System
+
+```markdown
+# 🏥 Hospital Patient Management System
+
+A Hospital Patient Management System developed in **C++** to manage patient records, hospital beds, and waiting queues efficiently.
+
+The system demonstrates the use of **Data Structures such as Linked Lists and Queues** to simulate real hospital operations.
 
 ---
 
 ## 📌 Project Overview
 
-The Patient Management System allows users to store and manage patient information such as personal details, medical records, and appointment data. The goal of the system is to simplify patient data handling and reduce manual record-keeping in healthcare environments.
+Hospitals must manage patients efficiently, especially when beds are limited.  
+This project simulates a hospital system where:
+
+- Patients are admitted to beds if available
+- If beds are full, patients are placed in a **waiting queue**
+- Patients are treated and discharged
+- Waiting patients move to beds when available
 
 ---
 
 ## ✨ Features
 
-- ➕ Add new patient records
-- 📋 View all patient details
-- 🔍 Search patient by ID or name
-- ✏️ Update patient information
-- ❌ Delete patient records
-- 📂 Organized patient database
+- Add new patients
+- Admit patients to hospital beds
+- Manage **waiting room queue**
+- Display admitted and waiting patients
+- Search patient by ID
+- Sort patients by **priority**
+- Attend and discharge patients
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠 Data Structures Used
 
-- Programming Language: **C++ / Python** *(update according to your project)*
-- Concepts Used:
-  - Data Structures
-  - Object-Oriented Programming (OOP)
-  - Functions & Modular Programming
-  - File Handling / Data Storage
+- **Linked List** → to store admitted patients
+- **Queue** → to manage waiting patients
+- **Searching** → to find patient by ID
+- **Merge Sort** → to sort patients based on priority
 
 ---
 
 ## 📂 Project Structure
 
-```
-Patient-Management/
+Hospital-Patient-Management/
 │
-├── main.cpp / main.py
-├── patient.cpp
-├── patient.h
+├── PROJECT_4_HOSPITAL_PATIENT_MANAGEMENT_SYSTEM.cpp
 └── README.md
-```
 
-*(Modify according to your actual file structure)*
 
 ---
 
 ## ⚙️ How to Run the Project
 
-### 1️⃣ Clone the repository
+### Compile the program
 
 ```bash
-git clone https://github.com/maanyafadia1903-dotcom/Patient-Management
-```
+g++ PROJECT_4_HOSPITAL_PATIENT_MANAGEMENT_SYSTEM.cpp -o hospital
+./hospital
 
-### 2️⃣ Go to the project folder
-
-```bash
-cd Patient-Management
-```
-
-### 3️⃣ Run the program
-
-For **C++**
-
-```bash
-g++ main.cpp -o patient
-./patient
-```
-
-For **Python**
-
-```bash
-python main.py
-```
-
----
-
-## 🎯 Learning Outcomes
-
-Through this project I practiced:
-
-- Implementing **basic healthcare data management**
-- Using **data structures to organize records**
-- Writing **structured and modular code**
-- Understanding real-world **software system design**
-
----
-
-## 🚀 Future Improvements
-
-- Add graphical user interface (GUI)
-- Integrate database (MySQL / SQLite)
-- Add doctor and appointment management
-- Build a web-based hospital management system
-
----
-
-## 👩‍💻 Author
-
-**Maanya Fadia**
-
-B.Tech CSE (AI & ML)  
-JG University
-
-GitHub:  
-https://github.com/maanyafadia1903-dotcom
-
----
-
-⭐ If you find this project useful, consider **starring the repository**.
+## 📂 Project Structure
