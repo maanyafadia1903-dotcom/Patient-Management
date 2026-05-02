@@ -1,66 +1,65 @@
+# Priority-Based Hospital Management System
+
+A high-performance C++ implementation of a Hospital Patient Management System utilizing specialized Data Structures and Algorithms[cite: 5]. This system efficiently manages patient admissions, bed allocations, and waiting room transitions using a custom **Linked List** and **Merge Sort** architecture[cite: 5].
 
 ---
 
-# Hospital Patient Management System
+## 🏥 Key Features
 
-```markdown
-# 🏥 Hospital Patient Management System
-
-A Hospital Patient Management System developed in **C++** to manage patient records, hospital beds, and waiting queues efficiently.
-
-The system demonstrates the use of **Data Structures such as Linked Lists and Queues** to simulate real hospital operations.
-
----
-
-## 📌 Project Overview
-
-Hospitals must manage patients efficiently, especially when beds are limited.  
-This project simulates a hospital system where:
-
-- Patients are admitted to beds if available
-- If beds are full, patients are placed in a **waiting queue**
-- Patients are treated and discharged
-- Waiting patients move to beds when available
+*   **Smart Admission System**: Automatically manages a fixed bed capacity (5 beds) and seamlessly redirects overflow patients to a priority-based waiting room[cite: 5].
+*   **Dual-Tier Management**: Maintains separate data structures for currently admitted patients and those in the waiting room queue[cite: 5].
+*   **Priority Sorting**: Implements an optimized **Merge Sort** algorithm ($O(n \log n)$ complexity) to organize patients based on medical urgency (priority levels)[cite: 5].
+*   **Patient Lifecycle Workflow**: 
+    *   **Admission**: Records patient ID, name, age, and priority[cite: 5].
+    *   **Attendance/Discharge**: When a doctor attends to a patient, they are discharged, and the first person in the waiting room is automatically moved to the vacated bed[cite: 5].
+    *   **Search**: Real-time lookup for patients across both admitted and waiting lists[cite: 5].
 
 ---
 
-## ✨ Features
+## 💻 Technical Implementation
 
-- Add new patients
-- Admit patients to hospital beds
-- Manage **waiting room queue**
-- Display admitted and waiting patients
-- Search patient by ID
-- Sort patients by **priority**
-- Attend and discharge patients
+The project is built using Object-Oriented Programming (OOP) principles in C++[cite: 5]:
 
----
-
-## 🛠 Data Structures Used
-
-- **Linked List** → to store admitted patients
-- **Queue** → to manage waiting patients
-- **Searching** → to find patient by ID
-- **Merge Sort** → to sort patients based on priority
+*   **`Node` Structure**: A custom structure storing patient data and pointers for linked list navigation[cite: 5].
+*   **`LinkedList` Class**: Encapsulates the core logic, including:
+    *   `mergeSortLogic()`: Recursive sorting for linked lists[cite: 5].
+    *   `attend_patient()`: Logic for discharging and queue-to-bed migration[cite: 5].
+    *   `add_patients()`: Capacity-aware admission logic[cite: 5].
 
 ---
 
 ## 📂 Project Structure
 
-Hospital-Patient-Management/
-│
-├── PROJECT_4_HOSPITAL_PATIENT_MANAGEMENT_SYSTEM.cpp
-└── README.md
-
+```text
+└── hospital_management.cpp    # Main source code containing Node and LinkedList definitions
+```
 
 ---
 
-## ⚙️ How to Run the Project
+## 🚀 Getting Started
 
-### Compile the program
+### Prerequisites
+*   A C++ compiler (GCC, Clang, or MSVC).
+
+### Compilation and Execution
+To compile the system, run the following command in your terminal:
 
 ```bash
-g++ PROJECT_4_HOSPITAL_PATIENT_MANAGEMENT_SYSTEM.cpp -o hospital
-./hospital
+g++ hospital_management.cpp -o hospital_system
+```
 
-## 📂 Project Structure
+To run the application:
+
+```bash
+./hospital_system
+```
+
+---
+
+## 📊 Sample Workflow Execution
+
+The current `main()` function demonstrates the following automated workflow[cite: 5]:
+1.  **Admits 5 Patients**: Fills the hospital to capacity[cite: 5].
+2.  **Queue Management**: Sends a 6th patient (Shivam) to the waiting room[cite: 5].
+3.  **Sort Logic**: Reorganizes all patients based on their medical priority[cite: 5].
+4.  **Resource Reallocation**: Discharges a patient and automatically pulls the next patient from the queue into the available bed[cite: 5].
